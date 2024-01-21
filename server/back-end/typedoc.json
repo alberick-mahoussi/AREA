@@ -1,0 +1,6 @@
+{
+    "out": "../Doc",
+    "includes": ["src/**/*.ts"],
+    "exclude": ["node_modules"]
+  }
+  

@@ -1,0 +1,9 @@
+class-transformer
+class-validator
+prisma
+prisma/client
+argon2
+config
+passport
+passport-jwt
+express

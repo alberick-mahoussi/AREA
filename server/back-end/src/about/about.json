@@ -1,0 +1,513 @@
+{
+    "client": {
+        "host": "127.0.0.1",
+        "username": ""
+    },
+    "server": {
+        "services": [
+            {
+                "name": "WorldTime",
+                "picture": "https://cdn-icons-png.flaticon.com/512/2972/2972449.png",
+                "authentification": false,
+                "AvailableWebhook": false,
+                "serviceId": 0,
+                "actions": [
+                    {
+                        "name": "Set a Reminder",
+                        "description": "Triggers when the chosen time at the chosen place matches with the time",
+                        "parameters": [
+                            "Continent",
+                            "City",
+                            "Time"
+                        ]
+                    }
+                ],
+                "reactions": []
+            },
+            {
+                "name": "Weather",
+                "picture": "https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png",
+                "authentification": false,
+                "AvailableWebhook": false,
+                "serviceId": 1,
+                "actions": [
+                    {
+                        "name": "Temperature Warning",
+                        "description": "Triggers if the temperature is very low (< 5) or very high (> 30)",
+                        "parameters": [
+                            "City"
+                        ]
+                    },
+                    {
+                        "name": "Rain Warning",
+                        "description": "Triggers if it is currently raining",
+                        "parameters": [
+                            "City"
+                        ]
+                    }
+                ],
+                "reactions": []
+            },
+            {
+                "name": "Github",
+                "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUgFJ0M8TBsYeK2NWFBzzQy937HRj_-gZSuoA180UNWG0TldFXWi2rnlKU3PvBvt-OE8&usqp=CAU",
+                "authentification": true,
+                "AvailableWebhook": true,
+                "serviceId": 2,
+                "actions": [
+                    {
+                        "name": "Push on a repository",
+                        "description": "Triggers when there is a push on a repository",
+                        "parameters": [
+                            "Name of the repository"
+                        ]
+                    },
+                    {
+                        "name": "Issue created",
+                        "description": "Triggers when an issue is created on a repository",
+                        "parameters": [
+                            "Name of the repository"
+                        ]
+                    },
+                    {
+                        "name": "Issue closed",
+                        "description": "Triggers when an issue is closed on a repository",
+                        "parameters": [
+                            "Name of the repository"
+                        ]
+                    },
+                    {
+                        "name": "Pull request",
+                        "description": "Triggers when a pull request is done on a repository",
+                        "parameters": [
+                            "Name of the repository"
+                        ]
+                    },
+                    {
+                        "name": "Any action by an username",
+                        "description": "Triggers when any action is done by a user on a repository",
+                        "parameters": [
+                            "Username",
+                            "Name of the repository"
+                        ]
+                    },
+                    {
+                        "name": "Delete branch",
+                        "description": "Triggers when a branch is deleted on a repository",
+                        "parameters": [
+                            "Name of the repository"
+                        ]
+                    },
+                    {
+                        "name": "Create branch",
+                        "description": "Triggers when a branch is created on a repository",
+                        "parameters": [
+                            "Name of the repository"
+                        ]
+                    }
+                ],
+                "reactions": [
+                    {
+                        "name": "Pull request",
+                        "description": "Create a pull request from a branch to another",
+                        "parameters": [
+                            "Name of the repository",
+                            "Title of the pull request",
+                            "Message of the pull request",
+                            "1st branch the of pull request",
+                            "Branch receving the pull request"
+                        ]
+                    },
+                    {
+                        "name": "Create issue",
+                        "description": "Create an issue on a repository",
+                        "parameters": [
+                            "Name of the repository",
+                            "Title of the issue",
+                            "Content of the issue",
+                            "User assigned to the issue"
+                        ]
+                    },
+                    {
+                        "name": "Delete issue",
+                        "description": "Delete an issue on a repository",
+                        "parameters": [
+                            "Name of the repository",
+                            "Title of the issue"
+                        ]
+                    },
+                    {
+                        "name": "Create branch",
+                        "description": "Create a branch on a repository",
+                        "parameters": [
+                            "Name of the repository",
+                            "Name of the initial branch",
+                            "Name of the new branch"
+                        ]
+                    },
+                    {
+                        "name": "Delete branch",
+                        "description": "Delete a branch from a repository",
+                        "parameters": [
+                            "Name of the repository",
+                            "Name of the branch"
+                        ]
+                    },
+                    {
+                        "name": "Create a repository",
+                        "description": "Create a new repository",
+                        "parameters": []
+                    }
+                ]
+            },
+            {
+                "name": "Mail",
+                "picture": "https://mail.fr/img/icons/icon-mail.png",
+                "authentification": false,
+                "AvailableWebhook": false,
+                "serviceId": 3,
+                "actions": [],
+                "reactions": [
+                    {
+                        "name": "Receive email",
+                        "description": "Receive an email",
+                        "parameters": [
+                            "Email address"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Gitlab",
+                "picture": "https://d31ezp3r8jwmks.cloudfront.net/xrcdr4m3nxubpjzg19yz6zyzziwa",
+                "authentification": true,
+                "AvailableWebhook": true,
+                "serviceId": 4,
+                "actions": [
+                    {
+                        "name": "Push on a repository",
+                        "description": "Triggers when there is a push on a repository",
+                        "parameters": [
+                            "Name of the repository"
+                        ]
+                    },
+                    {
+                        "name": "New tag on repository",
+                        "description": "Triggers when a new tag is created on a repository",
+                        "parameters": [
+                            "Name of the repository"
+                        ]
+                    },
+                    {
+                        "name": "Pull request update",
+                        "description": "Triggers when a merge request is updated on a repository",
+                        "parameters": [
+                            "Name of the repository"
+                        ]
+                    },
+                    {
+                        "name": "Pull request",
+                        "description": "Triggers when a pull request is done on a repository",
+                        "parameters": [
+                            "Name of the repository"
+                        ]
+                    },
+                    {
+                        "name": "Close a pull request",
+                        "description": "Triggers when a pull request is closed on a repository",
+                        "parameters": [
+                            "Name of the repository"
+                        ]
+                    },
+                    {
+                        "name": "Issue created",
+                        "description": "Triggers when an issue is created on a repository",
+                        "parameters": [
+                            "Name of the repository"
+                        ]
+                    },
+                    {
+                        "name": "Issue closed",
+                        "description": "Triggers when an issue is closed on a repository",
+                        "parameters": [
+                            "Name of the repository"
+                        ]
+                    },
+                    {
+                        "name": "Issue assigned",
+                        "description": "Triggers when an issue is assigned to specified user",
+                        "parameters": [
+                            "Name of the user",
+                            "Name of repository"
+                        ]
+                    }
+                ],
+                "reactions": [
+                    {
+                        "name": "Create a repository",
+                        "description": "Create a new repository",
+                        "parameters": [
+                            "Name of repository"
+                        ]
+                    },
+                    {
+                        "name": "New tag for a repository",
+                        "description": "Create a tag on a branch of a repository",
+                        "parameters": [
+                            "Name of the repository",
+                            "Tag Name",
+                            "Branch Name"
+                        ]
+                    },
+                    {
+                        "name": "Create issue",
+                        "description": "Create an issue on a repository",
+                        "parameters": [
+                            "Name of the repository",
+                            "Title of the issue",
+                            "Content of the issue"
+                        ]
+                    },
+                    {
+                        "name": "Delete issue",
+                        "description": "Delete an issue on a repository",
+                        "parameters": [
+                            "Name of the repository",
+                            "Id issue"
+                        ]
+                    },
+                    {
+                        "name": "Create branch",
+                        "description": "Create a branch on a repository",
+                        "parameters": [
+                            "Name of the repository",
+                            "Name of the new branch",
+                            "Name of the initial branch"
+                        ]
+                    },
+                    {
+                        "name": "Delete branch",
+                        "description": "Delete a branch from a repository",
+                        "parameters": [
+                            "Name of the repository",
+                            "Name of the branch"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Gmail",
+                "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/320px-Gmail_icon_%282020%29.svg.png",
+                "authentification": true,
+                "AvailableWebhook": true,
+                "serviceId": 5,
+                "actions": [],
+                "reactions": [
+                    {
+                        "name": "Send email",
+                        "description": "Send an email on an address",
+                        "parameters": [
+                            "Email address",
+                            "Subject of the email",
+                            "Content of the email"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Outlook",
+                "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/800px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png",
+                "authentification": true,
+                "AvailableWebhook": true,
+                "serviceId": 6,
+                "actions": [
+                    {
+                        "name": "Receive email",
+                        "description": "Triggers when an email is received",
+                        "parameters": [
+                            "Email address"
+                        ]
+                    }
+                ],
+                "reactions": [
+                    {
+                        "name": "Send email",
+                        "description": "Send an email on an address",
+                        "parameters": [
+                            "Email address",
+                            "Subject of the email",
+                            "Content of the email"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Google Calendar",
+                "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/480px-Google_Calendar_icon_%282020%29.svg.png",
+                "authentification": true,
+                "AvailableWebhook": true,
+                "serviceId": 7,
+                "actions": [],
+                "reactions": [
+                    {
+                        "name": "Create event",
+                        "description": "Create an event on a calendar",
+                        "parameters":[
+                            "Summary",
+                            "Description",
+                            "Location",
+                            "Start time",
+                            "End time"
+                        ]
+                    },
+                    {
+                        "name": "Create even on a calendar",
+                        "description": "Create an event on a specified calendar",
+                        "parameters":[
+                            "ID calendar",
+                            "Summary",
+                            "Description",
+                            "Location",
+                            "Start time",
+                            "End time"
+                        ]
+                    },
+                    {
+                        "name": "Delete Event",
+                        "description": "Delete an event on a calendar",
+                        "parameters":[
+                            "ID of the event"
+                        ]
+                    },
+                    {
+                        "name": "Create calendar",
+                        "description": "Create a new calendar",
+                        "parameters":[
+                            "Name of calendar"
+                        ]
+                    },
+                    {
+                        "name": "Delete Event with ID on specified calendar",
+                        "description": "deleted a specific event in specified calendar",
+                        "parameters":[
+                            "ID of event",
+                            "ID of calendar"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Notion",
+                "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/1200px-Notion-logo.svg.png",
+                "authentification": true,
+                "AvailableWebhook": false,
+                "serviceId": 8,
+                "actions": [],
+                "reactions": [
+                    {
+                        "name": "Create block",
+                        "description": "Create a notion block",
+                        "parameters": [
+                            "Page ID"
+                        ]
+                    },
+                    {
+                        "name": "Create database",
+                        "description": "Create a notion database",
+                        "parameters": [
+                            "Page ID"
+                        ]
+                    },
+                    {
+                        "name": "Add comment",
+                        "description": "Add a comment to a notion database",
+                        "parameters": [
+                            "Page ID"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Discord",
+                "picture": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Discord_Logo_sans_texte.svg/213px-Discord_Logo_sans_texte.svg.png",
+                "authentification": true,
+                "AvailableWebhook": true,
+                "serviceId": 9,
+                "actions": [],
+                "reactions": [
+                    {
+                        "name": "Receive message",
+                        "description": "Receive a message in a channel",
+                        "parameters": [
+                            "Channel ID"
+                        ]
+                    },
+                    {
+                        "name": "Receive direct message",
+                        "description": "Receive a direct message with a bot",
+                        "parameters": []
+                    },
+                    {
+                        "name": "Mention someone",
+                        "description": "Mention someone in a channel",
+                        "parameters": [
+                            "Channel ID",
+                            "User ID"
+                        ]
+                    },
+                    {
+                        "name": "Create poll",
+                        "description": "Create a poll",
+                        "parameters": [
+                            "Channel ID",
+                            "Question",
+                            "Poll options"
+                        ]
+                    },
+                    {
+                        "name": "Private message",
+                        "description": "Send a private message to someone",
+                        "parameters": [
+                            "User ID",
+                            "Message content"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Spotify",
+                "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/240px-Spotify_logo_without_text.svg.png",
+                "authentification": true,
+                "AvailableWebhook": false,
+                "serviceId": 10,
+                "actions": [
+                    {
+                        "name": "Playlist size",
+                        "description": "Triggers when the number of tracks in a playlist in greater than the given number",
+                        "parameters": [
+                            "Playlist ID",
+                            "Number of tracks"
+                        ]
+                    }
+                ],
+                "reactions": [
+                    {
+                        "name": "Create playlist",
+                        "description": "Create a spotify playlist",
+                        "parameters": [
+                            "Playlist name"
+                        ]
+                    },
+                    {
+                        "name": "Add song to a playlist",
+                        "description": "Add a song to a playlist",
+                        "parameters": [
+                            "Playlist ID",
+                            "Track ID"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "client": {
+        "host": "127.0.0.1",
+        "username": ""
+    },
+    "server": {
+        "services": [{
+            "name": "WorldTime",
+            "picture": "https://cdn-icons-png.flaticon.com/512/2972/2972449.png",
+            "authentification": "",
+            "logged": "",
+            "actions": [{
+                "name": "get_time",
+                "description": "Gives you the time at a specific location",
+                "parameters": ["Continent", "City", "Time"]
+            }],
+            "reactions": [{
+                "name": "receive_mail",
+                "description": "The user receives a mail",
+                "parameters": ["Destination mail"]
+            }]
+        },{
+            "name": "Facebook",
+            "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/480px-2021_Facebook_icon.svg.png",
+            "authentification": "",
+            "logged": "", 
+            "actions": [{
+                "name": "new_event_calendar",
+                "description": "Create a new event in Calendar app of microsoft",
+                "parameters": ["nom", "prenom"]
+            }],
+            "reactions": [{
+                "name": "like_message",
+                "description": "The user likes a message",
+                "parameters": []
+            }]
+        },{
+            "name": "Facebook",
+            "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/480px-2021_Facebook_icon.svg.png",
+            "authentification": "",
+            "logged": "", 
+            "actions": [{
+                "name": "new_event_calendar",
+                "description": "Create a new event in Calendar app of microsoft",
+                "parameters": ["nom", "prenom"]
+            }],
+            "reactions": [{
+                "name": "like_message",
+                "description": "The user likes a message",
+                "parameters": []
+            }]
+        },{
+            "name": "Facebook",
+            "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/480px-2021_Facebook_icon.svg.png",
+            "authentification": "",
+            "logged": "", 
+            "actions": [{
+                "name": "new_event_calendar",
+                "description": "Create a new event in Calendar app of microsoft",
+                "parameters": ["nom", "prenom"]
+            }],
+            "reactions": [{
+                "name": "like_message",
+                "description": "The user likes a message",
+                "parameters": []
+            }]
+        }]
+    }
+}

@@ -1,0 +1,70 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int       @id @default(autoincrement())
+  email    String    @unique
+  emailGoogle String? @unique
+  emailMicrosoft String? @unique
+  password String
+  username String?
+  picture  String?
+  areas    Area[]
+  services Service[]
+  Settings Settings?
+}
+
+model Token {
+  id                Int       @id @default(autoincrement())
+  Token             String
+  TokenTimeValidity String
+  RefreshToken String
+  createdAt         DateTime  @default(now())
+  Service           Service[]
+}
+
+model Area {
+  Id               Int      @id @default(autoincrement())
+  User             User     @relation(fields: [UserId], references: [id])
+  UserId           Int
+  Action_id        Int
+  Action_Service   String
+  ActionParam      String[]
+  ReactionId       Int
+  Reaction_Service String
+  ReactionParam    String[]
+  state            Status
+}
+
+model Service {
+  id               Int     @id @default(autoincrement())
+  NameService      String
+  RequiresAuth     Boolean
+  User             User    @relation(fields: [UserId], references: [id])
+  UserId           Int
+  TokenData        Token?  @relation(fields: [TokenId], references: [id])
+  TokenId          Int?
+  AvailableWebhook Boolean
+  data             Json?
+}
+
+model Settings {
+  id Int @id @default(autoincrement())
+  user User? @relation(fields: [UserId], references: [id])
+  UserId Int? @unique
+  serviceDisabled String[]
+}
+
+enum Status {
+  ON
+  OFF
+}

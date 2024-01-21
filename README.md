@@ -58,8 +58,8 @@ We welcome contributions to AREA! If you wish to contribute, please follow these
 ## Contact Information
 
 For any inquiries or feedback, please contact:
-- [Sean Jaboulet](mailto:sean@example.com)
-- [Pascal Lin](mailto:pascal@example.com)
-- [Alberick Mahoussi](mailto:alberick@example.com)
+- [Sean Jaboulet](mailto:sean.jaboulet@epitech.eu)
+- [Pascal Lin](mailto:pascal.lin@epitech.eu)
+- [Alberick Mahoussi](mailto:mahoussisolen@gmail.com)
 - [Aurélien Lenfant](mailto:aurelien@example.com)
 - [Louis Ferrari](mailto:louis@example.com)
